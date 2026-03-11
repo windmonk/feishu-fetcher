@@ -36,15 +36,15 @@ python3 --version
 ### 列出所有文件
 
 ```bash
-python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --list
+python3 skills/feishu-fetcher/scripts/feishu_fetcher.py --list
 ```
 
 输出示例：
 ```
-Feishu Media Directory: /Users/windnemo/.nanobot/media/feishu
+Feishu Media Directory: ~/.nanobot/media/feishu
 Found 3 file(s)
 
-    1. img_v3_02vm_2e70.jpg                       148.4 KB  2026-03-11 22:21:12
+    1. img_v3_02vm_02a1.jpg                       148.4 KB  2026-03-11 22:21:12
     2. img_v3_02vm_6ca3.jpg                       127.9 KB  2026-03-11 17:12:11
     3. img_v3_02vm_a7bc.jpg                       127.9 KB  2026-03-11 17:09:50
 ```
@@ -53,7 +53,7 @@ Found 3 file(s)
 
 只列出图片文件：
 ```bash
-python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --list --type image
+python3 skills/feishu-fetcher/scripts/feishu_fetcher.py --list --type image
 ```
 
 支持的文件类型：
@@ -67,33 +67,33 @@ python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --l
 ### 获取最新文件
 
 ```bash
-python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --latest
+python3 skills/feishu-fetcher/scripts/feishu_fetcher.py --latest
 ```
 
 输出示例：
 ```
-[SUCCESS] Copied: img_v3_02vm_2e70.jpg
-   Source: /Users/windnemo/.nanobot/media/feishu/img_v3_02vm_2e70.jpg
-   Target: /Users/windnemo/.nanobot/workspace/img_v3_02vm_2e70.jpg
+[SUCCESS] Copied: img_v3_02vm_02a1.jpg
+   Source: ~/.nanobot/media/feishu/img_v3_02vm_02a1.jpg
+   Target: ~/.nanobot/workspace/img_v3_02vm_02a1.jpg
    Size:   148.4 KB
 ```
 
 ### 获取指定文件
 
 ```bash
-python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py img_v3_02vm_2e70.jpg
+python3 skills/feishu-fetcher/scripts/feishu_fetcher.py img_v3_02vm_02a1.jpg
 ```
 
 ### 指定输出目录
 
 ```bash
-python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py img_v3_02vm_2e70.jpg --output ./downloads/
+python3 skills/feishu-fetcher/scripts/feishu_fetcher.py img_v3_02vm_02a1.jpg --output ./downloads/
 ```
 
 ### 显示帮助信息
 
 ```bash
-python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --help
+python3 skills/feishu-fetcher/scripts/feishu_fetcher.py --help
 ```
 
 ## 工作流程
@@ -136,10 +136,10 @@ feishu-fetcher/
 
 ```python
 # 示例：列出飞书文件
-exec("python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --list")
+exec("python3 skills/feishu-fetcher/scripts/feishu_fetcher.py --list")
 
 # 示例：获取最新文件
-exec("python3 ~/.nanobot/workspace/skills/feishu-fetcher/scripts/feishu_fetcher.py --latest")
+exec("python3 skills/feishu-fetcher/scripts/feishu_fetcher.py --latest")
 ```
 
 ## 常见问题
